@@ -28,6 +28,16 @@ body.dark-theme {
     align-items: center;
 }
 
+.snowflake {
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+
 .box-area {
     position: absolute;
     top: 0;
