@@ -125,7 +125,7 @@ body.dark-theme {
 .black-mountain-theme .container {
     height: 100vh;
     display: flex;
-    background-image: url(blackmountains.jpg);
+    background-image: url(black.jpg);
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -152,7 +152,50 @@ body.dark-theme {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.black-mountain-theme .container #tiktok,
+.black-mountain-theme .container #twitter,
+.black-mountain-theme .container #youtube,
+.black-mountain-theme .container #discord,
+.black-mountain-theme .container #github {
+    color: white;
+    font-size: 45px;
+    position: absolute;
+    top: 65%;
+    transition-duration: 0.3s;
+}
 
+.black-mountain-theme .container #tiktok {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.black-mountain-theme .container #twitter {
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.black-mountain-theme .container #youtube {
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.black-mountain-theme .container #discord {
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.black-mountain-theme .container #github {
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.black-mountain-theme .container #tiktok:hover,
+.black-mountain-theme .container #twitter:hover,
+.black-mountain-theme .container #youtube:hover,
+.black-mountain-theme .container #discord:hover,
+.black-mountain-theme .container #github:hover {
+    font-size: 55px;
+}
 
 .black-mountain-theme .glass {
     position: absolute;
