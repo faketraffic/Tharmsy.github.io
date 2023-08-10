@@ -44,6 +44,28 @@
         
     </div>
     <script>
+document.getElementById('themeButton').addEventListener('click', function() {
+  var body = document.body;
+  var themes = ['', 'dark-theme',];
+  var currentTheme = body.className;
+  var nextThemeIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
+  body.className = themes[nextThemeIndex];
+
+  if (themes[nextThemeIndex] === 'dark-theme') {
+    addSnowflakes();
+  }
+});
+
+function addSnowflakes() {
+  for (var i = 0; i < 50; i++) {
+    var snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.style.left = Math.random() * 100 + 'vw';
+    snowflake.style.top = Math.random() * 100 + 'vh';
+    snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's'; 
+    document.body.appendChild(snowflake);
+  }
+}
         var typed = new Typed(".auto-type", {
             strings: ["Owner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "Owner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "wner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "wner On PhoenixCraft", "staff on dk4kja8"],
             typeSpeed: 150,
