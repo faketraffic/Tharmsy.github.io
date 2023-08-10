@@ -116,7 +116,63 @@ body.dark-theme {
   
   
   
-  
+  .black-mountain-theme * {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.black-mountain-theme .container {
+    height: 100vh;
+    display: flex;
+    background-image: url(blackmountains.jpg);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-mountain-theme .box-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.black-mountain-theme .container h1 {
+    font-size: 75px;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.black-mountain-theme .glass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: 800px;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.01);
+    color: white;
+    z-index: 2;
+    border-radius: 15px;
+    padding: 29px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(5px);
+    -webkit-box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.09);
+    box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.09);
+}
+
   
 
 .wave {

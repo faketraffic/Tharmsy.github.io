@@ -44,8 +44,18 @@
         
     </div>
     <script>
+const themes = [
+  'black-mountain-theme',
+  'soon',
+  'soon',
+];
+
+let currentTheme = 0;
+
 document.getElementById('themeButton').addEventListener('click', function() {
-  document.body.classList.toggle('black-mountain-theme');
+  document.body.classList.remove(themes[currentTheme]);
+  currentTheme = (currentTheme + 1) % themes.length;
+  document.body.classList.add(themes[currentTheme]);
 });
 
 
