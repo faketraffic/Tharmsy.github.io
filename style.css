@@ -5,6 +5,9 @@ body {
     background: linear-gradient(45deg, lightblue, lightgreen);
     overflow: hidden;
     background-color: white;
+    background-image: url('iceland.jpg'); /* Change to your image URL */
+    background-size: cover;
+    background-position: center;
 }
 
 body.dark-theme {
