@@ -113,7 +113,11 @@ body.dark-theme {
     transform: translateX(-50%);
     white-space: nowrap; /* Prevent wrapping of tooltip text */
   }
-  
+
+  body, html {
+    height: 100%;
+    margin: 0;
+}
   
   
   .black-mountain-theme * {
