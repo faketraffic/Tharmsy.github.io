@@ -45,16 +45,9 @@
     </div>
     <script>
 document.getElementById('themeButton').addEventListener('click', function() {
-  var body = document.body;
-  var themes = ['', 'dark-theme',];
-  var currentTheme = body.className;
-  var nextThemeIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
-  body.className = themes[nextThemeIndex];
-
-  if (themes[nextThemeIndex] === 'dark-theme') {
-    addSnowflakes();
-  }
+  document.body.classList.toggle('black-mountain-theme');
 });
+
 
 function addSnowflakes() {
   for (var i = 0; i < 50; i++) {
