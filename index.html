@@ -19,7 +19,11 @@
     <title>Tharmsy.xyz | 0.2</title>
 </head>
 <body>
-    <button id="themeButton">Change Theme</button>
+    <select id="theme-selector">
+        <option value="iceland">Iceland</option>
+        <option value="black-mountain">Black Mountain</option>
+        <option value="none">Soon</option>
+    </select>
     <div class="container">
         <ul class="box-area">
             <li></li>
@@ -44,18 +48,16 @@
         
     </div>
     <script>
-const themes = [
-  'black-mountain-theme',
-  'soon',
-  'soon',
-];
+document.getElementById('theme-selector').addEventListener('change', function() {
+    var selectedTheme = this.value;
+    var body = document.body;
 
-let currentTheme = 0;
+    body.className = '';
 
-document.getElementById('themeButton').addEventListener('click', function() {
-  document.body.classList.remove(themes[currentTheme]);
-  currentTheme = (currentTheme + 1) % themes.length;
-  document.body.classList.add(themes[currentTheme]);
+
+    if (selectedTheme !== 'iceland') {
+        body.classList.add(selectedTheme + '-theme');
+    }
 });
 
 
