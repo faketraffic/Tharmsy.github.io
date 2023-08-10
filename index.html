@@ -19,11 +19,13 @@
     <title>Tharmsy.xyz | 0.2</title>
 </head>
 <body>
-    <select id="theme-selector">
-        <option value="iceland">Iceland</option>
-        <option value="black-mountain">Black Mountain</option>
-        <option value="none">Soon</option>
-    </select>
+    <div id="theme-selector-container">
+        <button id="theme-toggle-button">Select Theme</button>
+        <div id="theme-options" class="theme-options-hidden">
+            <div class="theme-option" onclick="switchTheme('iceland')">Iceland</div>
+            <div class="theme-option" onclick="switchTheme('black-mountain')">Black Mountain</div>
+        </div>
+    </div>
     <div class="container">
         <ul class="box-area">
             <li></li>
@@ -48,35 +50,43 @@
         
     </div>
     <script>
-document.getElementById('theme-selector').addEventListener('change', function() {
-    var selectedTheme = this.value;
-    var body = document.body;
-
-    body.className = '';
-
-
-    if (selectedTheme !== 'iceland') {
-        body.classList.add(selectedTheme + '-theme');
+document.getElementById('theme-toggle-button').addEventListener('click', function() {
+    var options = document.getElementById('theme-options');
+    if (options.classList.contains('theme-options-hidden')) {
+        options.classList.remove('theme-options-hidden');
+    } else {
+        options.classList.add('theme-options-hidden');
     }
 });
 
+function switchTheme(theme) {
+    var body = document.body;
+    body.className = '';
+
+    if (theme !== 'iceland') {
+        body.classList.add(theme + '-theme');
+    }
+
+    document.getElementById('theme-options').classList.add('theme-options-hidden');
+}
 
 function addSnowflakes() {
-  for (var i = 0; i < 50; i++) {
-    var snowflake = document.createElement('div');
-    snowflake.className = 'snowflake';
-    snowflake.style.left = Math.random() * 100 + 'vw';
-    snowflake.style.top = Math.random() * 100 + 'vh';
-    snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's'; 
-    document.body.appendChild(snowflake);
-  }
+    for (var i = 0; i < 50; i++) {
+        var snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.top = Math.random() * 100 + 'vh';
+        snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        document.body.appendChild(snowflake);
+    }
 }
-        var typed = new Typed(".auto-type", {
-            strings: ["Owner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "Owner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "wner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "wner On PhoenixCraft", "staff on dk4kja8"],
-            typeSpeed: 150,
-            backSpeed: 100,
-            looped: true
-        });
+
+var typed = new Typed(".auto-type", {
+    strings: ["Owner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "Owner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "wner On PhoenixCraft", "staff on dk4kja8", "Developer of Doom Client", "wner On PhoenixCraft", "staff on dk4kja8"],
+    typeSpeed: 150,
+    backSpeed: 100,
+    looped: true
+});
     </script>
 </body>
 </html>

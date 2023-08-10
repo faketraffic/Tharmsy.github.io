@@ -5,7 +5,7 @@ body {
     background: linear-gradient(45deg, lightblue, lightgreen);
     overflow: hidden;
     background-color: white;
-    background-image: url('iceland.jpg'); /* Change to your image URL */
+    background-image: url('iceland.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -126,10 +126,8 @@ body.dark-theme {
     font-family: 'Poppins', sans-serif;
 }
 
-.black-mountain-theme .container {
-    height: 100%;
-    background: url('black.jpg') no-repeat center center fixed; 
-    background-size: cover;
+.black-mountain-theme {
+    background-image: url('black.jpg');
 }
 
 .black-mountain-theme .box-area {
@@ -219,13 +217,7 @@ body.dark-theme {
 
   
 
-.wave {
-    animation-duration: 1.8s;
-    animation-iteration-count: infinite;
-    animation-name: wave;
-    display: inline-block;
-    transform-origin: 70% 70%;
-}
+
 
 @keyframes wave {
     0% {
@@ -262,4 +254,15 @@ body.dark-theme {
     margin: 0 10px; /* Adjust as needed */
     font-size: 24px; /* Adjust the icon size as needed */
   }
+  .social-icons a {
+    color: #fff; 
+}
+
+.iceland-theme .social-icons a {
+    color: #000; 
+}
+
+.black-mountain-theme .social-icons a {
+    color: #fff; 
+}
 
