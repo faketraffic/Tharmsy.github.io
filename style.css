@@ -12,11 +12,18 @@ body.dark-theme {
     color: white; 
   }
 
+  .snowflake {
+    position: fixed;
+    background: url('snowflake.png') no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+
 .container {
     position: relative;
     width: 100%;
     height: 100vh;
-    display: flex;
+       display: flex;
     justify-content: center;
     align-items: center;
 }
