@@ -123,12 +123,13 @@ body.dark-theme {
 }
 
 .black-mountain-theme .container {
-    height: 100vh;
-    display: flex;
-    background-image: url(black.jpg);
+    background-image: url('black.jpg');
     background-size: cover;
-    justify-content: center;
-    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .black-mountain-theme .box-area {
